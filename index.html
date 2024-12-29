@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Dialog -->
+
+    <div class="dialogContainer">
+      <div id="entertask">
+        <p class="enter">Enter task</p>
+        <input
+          type="text"
+          class="taskname"
+          placeholder="Task name..."
+          id="inputElement"
+        />
+        <select class="select" id="selectElement">
+          <option value="" disabled selected hidden>Select status</option>
+          <option value="todo">To do</option>
+          <option value="inprogress">In progress</option>
+          <option value="done">Done</option>
+          <option value="blocked">Blocked</option>
+        </select>
+        <button id="submit">Submit</button>
+      </div>
+      <p id="error">Input cannot be empty</p>
+    </div>
+
+    <!-- Add button -->
+
+    <div id="container">
+      <div class="addContainer">
+        <button id="add">Add task</button>
+      </div>
+
+      <!-- To Do  -->
+
+      <div class="main">
+        <div class="card" id="task-counts">
+          <div class="frame">
+            <div class="top">
+              <div class="dot white"></div>
+              <p class="to-do">To Do</p>
+              <p class="number" id="todo-count">0</p>
+            </div>
+          </div>
+          <div id="todo-task"></div>
+        </div>
+        <div class="card">
+          <div class="frame">
+            <div class="top">
+              <div class="dot yellow"></div>
+              <p class="to-do">In progress</p>
+              <p class="number" id="inprogress-count">0</p>
+            </div>
+          </div>
+          <div id="inprogress-task"></div>
+        </div>
+        <div class="card">
+          <div class="frame">
+            <div class="top">
+              <div class="dot green"></div>
+              <p class="to-do">Done</p>
+              <p class="number" id="done-count">0</p>
+            </div>
+          </div>
+          <div id="done-task"></div>
+        </div>
+        <div class="card">
+          <div class="frame">
+            <div class="top">
+              <div class="dot red"></div>
+              <p class="to-do">Blocked</p>
+              <p class="number" id="blocked-count">0</p>
+            </div>
+          </div>
+          <div id="blocked-task"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
